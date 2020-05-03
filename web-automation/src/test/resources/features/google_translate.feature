@@ -1,4 +1,4 @@
-Feature: Traductor de google
+Feature: Google translate
 
   As a Google translate user
   I want to translate a word

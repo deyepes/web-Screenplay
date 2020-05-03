@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import net.serenitybdd.screenplay.targets.Target;
 
+import static co.com.empresa.qa.userinterface.MainPage.DESTINATIONTEXT;
+import static co.com.empresa.qa.userinterface.MainPage.SOURCETEXT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Translate implements Task {
@@ -25,9 +27,9 @@ public class Translate implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue(word).into(By.id("source")),
-                Hit.the(Keys.ENTER).into(By.id("source"))
+                Enter.theValue(word).into(SOURCETEXT),
+                Hit.the(Keys.ENTER).into(SOURCETEXT)
         );
-        actor.remember("wordInEnglish", Target.the("texto").locatedBy("//span[@class='tlid-translation translation']").resolveFor(actor).getText());
+        actor.remember("wordInEnglish", DESTINATIONTEXT.resolveFor(actor).getText());
     }
 }
