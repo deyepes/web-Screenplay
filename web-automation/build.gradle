@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.39")
+    }
+}
+dependencies {
+    implementation 'net.serenity-bdd:serenity-core:2.0.39'
+    implementation 'net.serenity-bdd:serenity-junit:2.0.39'
+    implementation 'net.serenity-bdd:serenity-cucumber4:1.0.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:2.0.39'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:2.0.39'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'net.serenity-bdd:serenity-cucumber4:1.0.5'
+}
+
+gradle.startParameter.continueOnFailure = true
