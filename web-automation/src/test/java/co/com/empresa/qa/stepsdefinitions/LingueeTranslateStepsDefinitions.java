@@ -15,14 +15,14 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class GoogleTranslateStepsDefinitions {
+public class LingueeTranslateStepsDefinitions {
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("I'm on the google translator page")
-    public void iMOnTheGoogleTranslatorPage() {
+    @Given("I'm on the linguee translator page")
+    public void iMOnTheLingueeTranslatorPage() {
         theActorCalled("Daniel").wasAbleTo(Navigate.to("https://www.linguee.es/"));
     }
 
