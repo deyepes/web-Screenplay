@@ -23,7 +23,7 @@ public class GoogleTranslateStepsDefinitions {
 
     @Given("I'm on the google translator page")
     public void iMOnTheGoogleTranslatorPage() {
-        theActorCalled("Daniel").wasAbleTo(Navigate.to("https://translate.google.com/?hl=es#view=home&op=translate&sl=es&tl=en"));
+        theActorCalled("Daniel").wasAbleTo(Navigate.to("https://www.linguee.es/"));
     }
 
     @When("I write {string} in spanish")
